@@ -10,6 +10,19 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Deployment server
+This application is currently deployed on Github pages.
+
+Url: https://deshmukhshivkumar.github.io/TopTrends/dashboard
+
+## Deployment steps
+1. install package 
+    npm i -g angular-cli-ghpages
+2. build the app
+    ng build --prod --base-href “https://deshmukhshivkumar.github.io/TopTrends/”
+3. publish 
+    angular-cli-ghpages
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
