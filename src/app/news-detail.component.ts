@@ -3,35 +3,26 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location } from '@angular/common';
 
-import {HeroService} from './hero.service';
-import { Hero } from './hero';
-
 import { News } from './news';
 import { NewsService } from './news.service';
 
 @Component({
   selector: 'hero-detail',
-  templateUrl: './heroes.component.html',
-  styleUrls: [ './heroes.component.css' ]
+  templateUrl: './news.component.html',
+  styleUrls: [ './news.component.css' ]
 })
 
 
-export class HeroDetailComponent implements OnInit{
-	hero: Hero;
+export class NewsDetailComponent implements OnInit{
 	newsFeeds : News[] = [];
 	
 	constructor(
-		private heroService: HeroService,
 		private newsService : NewsService,
 		private route: ActivatedRoute,
 		private location: Location
 	) {};
 
-	ngOnInit(): void {
-		// this.route.paramMap
-		// 	.switchMap((params: ParamMap) => this.heroService.getHero(+params.get('id')))
-		// 	.subscribe(hero => this.hero = hero);
-		
+	ngOnInit(): void {	
 		this.route.paramMap
 			.switchMap((params: ParamMap) => this.newsService.getNewsBySource( params.get('id')))
 			.subscribe(feeds => this.newsFeeds = feeds);

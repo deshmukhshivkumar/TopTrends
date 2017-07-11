@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {Hero} from './hero';
-import {HeroService} from './hero.service';
 
 import { News } from './news';
 import { NewsSource } from './newsSource';
@@ -14,17 +12,13 @@ import {NewsService } from './news.service';
 
 export class DashboardComponent implements OnInit{
 
-    heroes : Hero[] = [];
     newsSources : NewsSource[] = [];
 
-    constructor (private heroService: HeroService, private newsSerice : NewsService) { 
+    constructor (private newsSerice : NewsService) { 
         
     }
 
     ngOnInit() : void {
-        this.heroService.getHeroes()
-            .then(heroes => this.heroes = heroes);
-
         this.newsSerice.getSources()
             .then(sources => this.newsSources = sources);      
 

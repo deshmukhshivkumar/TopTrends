@@ -4,20 +4,18 @@ import { FormsModule }   from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { HeroService } from './hero.service';
 import { NewsService } from './news.service';
 
-import { HeroesComponent } from './heroes.component';
-import { HeroDetailComponent } from './hero-detail.component';
+import { NewsComponent } from './news.component';
+import { NewsDetailComponent } from './news-detail.component';
 import { DashboardComponent } from './dashboard.component';
- 
 import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeroesComponent,
-	  HeroDetailComponent,
+    NewsComponent,
+	  NewsDetailComponent,
     DashboardComponent
   ],
   
@@ -29,8 +27,7 @@ import { AppRoutingModule }     from './app-routing.module';
   ],
   
   providers: [
-    HeroService,
-    NewsService
+   NewsService
   ],
   
   bootstrap: [AppComponent]
