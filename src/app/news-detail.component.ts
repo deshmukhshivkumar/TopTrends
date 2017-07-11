@@ -31,5 +31,4 @@ export class NewsDetailComponent implements OnInit{
 	goBack(): void {
   		this.location.back();
 	}
-
 }

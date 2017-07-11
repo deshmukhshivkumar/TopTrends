@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Location } from '@angular/common';
+import 'rxjs/add/operator/switchMap';
 
 import {News} from './news';
 import {NewsService} from './news.service';
@@ -16,25 +18,22 @@ export class NewsComponent implements OnInit {
 
 	constructor (
 		private router : Router,
-		private newsService: NewsService
+		private newsService: NewsService,
+		private location: Location
 	){}
 
-	getHeroes():  void {
+	getNews():  void {
   		this.newsService.getNews().then(feeds => this.newsFeeds = feeds);
 	};
 
 	ngOnInit(): void {
-		this.getHeroes();
+		
+		this.getNews();
 	}
 
-	// onSelect(hero: Hero): void {
-	// 	this.selectedHero = hero;
-
-	// };
-
-	// gotoDetail(): void {
-  	// 	this.router.navigate(['/detail', this.selectedHero.id]);
-	// }
+	goBack(): void {
+  		this.location.back();
+	}
 }
 
 
