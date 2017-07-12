@@ -25,7 +25,7 @@ export class NewsDetailComponent implements OnInit{
 	ngOnInit(): void {	
 		this.route.paramMap
 			.switchMap((params: ParamMap) => this.newsService.getNewsBySource( params.get('id')))
-			.subscribe(feeds => this.newsFeeds = feeds);
+			.subscribe(feeds => this.newsFeeds = feeds);		
 	};
 
 	goBack(): void {

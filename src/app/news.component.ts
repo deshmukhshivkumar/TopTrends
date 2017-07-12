@@ -23,11 +23,10 @@ export class NewsComponent implements OnInit {
 	){}
 
 	getNews():  void {
-  		this.newsService.getNews().then(feeds => this.newsFeeds = feeds);
+  		this.newsService.getNews().then(feeds => this.newsFeeds = feeds);		  
 	};
 
-	ngOnInit(): void {
-		
+	ngOnInit(): void {		
 		this.getNews();
 	}
 

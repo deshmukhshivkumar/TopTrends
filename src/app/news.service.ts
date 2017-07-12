@@ -23,11 +23,13 @@ export class NewsService{
     getNewsBySource (id: string): Promise<News[]> {
         var url = this.baseUrl +"source=" +  id + "&apiKey=ea0d47f672104628b4f2d9a5a65a7487";
 
-        return this.http
+        var data = this.http
                 .get(url)
                 .toPromise()
                 .then(response => response.json().articles as News[])
                 .catch(this.handleError);
+        
+        return data;
     } 
 
     getSources(): Promise<NewsSource[]>{
