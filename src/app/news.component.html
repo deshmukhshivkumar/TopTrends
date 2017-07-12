@@ -17,16 +17,10 @@
 
 <ul class="heroes">
   <li *ngFor="let feed of newsFeeds">
-
-    <!--<div *ngIf= "feed.author; then thenBlock else elseBlock"></div> 
-    <ng-template #thenBlock>
-      <span class="badge">{{ feed.author }}</span>
-    </ng-template>
-    <ng-template #elseBlock> 
-      <span class="badge"> {{feed.title}} </span> 
-    </ng-template>-->
-
     <span class="badge"> {{feed.title}} </span> 
     {{feed.description}}
+   
+    <!--<span> {{feed. url}} </span>-->
   </li>
+ 
 </ul>
