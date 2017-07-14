@@ -46,6 +46,14 @@ h4 {
 .grid-pad > [class*='col-']:last-of-type {
   padding-right: 20px;
 }
+
+.logo{
+  height: 32px;
+  width: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
 @media (max-width: 600px) {
   .module {
     font-size: 10px;

@@ -34,7 +34,7 @@
   display: inline-block;
   font-size: small;
   color: whitesmoke;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   padding: 0.8em 0.7em 0 0.7em;
   background-color: #5cc7b2;
   line-height: 1em;
@@ -46,7 +46,7 @@
   border-radius: 4px 0 0 4px;
 }
 button {
-  font-family: Arial;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
   background-color: #eee;
   border: none;
   padding: 5px 10px;
@@ -60,4 +60,44 @@ button:hover {
 
 .topmargin{
   margin-top: 10px;
+}
+
+ .smallBadge {
+  display: inline-block;
+  font-size: small;
+  color: whitesmoke;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  padding: 0.4em 0.4em 0.4em 0.8em;
+  background-color: #0275d8;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1em;
+  margin-right: .8em;
+  margin-top:.2em;
+  border-radius: 10rem;
+  font-weight: 700;
+  font-size: 75%;
+  text-align: center;
+}
+
+.linkBadge {
+  display: inline-block;
+  font-size: small;
+  color: whitesmoke;
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  padding: 0.4em 0.4em 0.4em 0.8em;
+  background-color: #5cb85c;
+  line-height: 1em;
+  position: relative;
+  left: -1px;
+  top: -4px;
+  height: 1em;
+  margin-right: .8em;
+  margin-top:.2em;
+  border-radius: 10rem;
+  font-weight: 700;
+  font-size: 75%;
+  text-align: center;
 }

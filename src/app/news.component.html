@@ -19,8 +19,7 @@
   <li *ngFor="let feed of newsFeeds">
     <span class="badge"> {{feed.title}} </span> 
     {{feed.description}}
-   
-    <!--<span> {{feed. url}} </span>-->
-  </li>
- 
+   <span *ngIf="feed.publishedAt" class="smallBadge"> {{feed.publishedAt | date : 'medium' }} </span>
+   <a href="{{ feed.url }}"  class="linkBadge" target="_blank"> Click for details </a>
+  </li>  
 </ul>
