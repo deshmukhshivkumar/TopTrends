@@ -11,7 +11,7 @@
 <div class="grid grid-pad">
     <div *ngFor="let source of newsSources"  [routerLink]="['/detail', source.id]" class="col-1-4">
         <div class="module hero">
-            <img class="logo" src='https://icons.better-idea.org/icon?url={{ source.url}}&size=32..50..100'/>
+            <img class="logo" src='https://icon-locator.herokuapp.com/icon?url={{ source.url}}&size=32..50..100'/>           
             <h4>{{source.name}}</h4>
         </div>
     </div>
